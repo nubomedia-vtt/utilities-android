@@ -27,6 +27,9 @@ public class LooperExecutor extends Thread implements Executor {
 	private boolean running = false;
 	private long threadId;
 
+	/**
+	 *
+	 */
 	@Override
 	public void run() {
 		Looper.prepare();
@@ -39,6 +42,9 @@ public class LooperExecutor extends Thread implements Executor {
 		Looper.loop();
 	}
 
+	/**
+	 *
+	 */
 	public synchronized void requestStart() {
 		if (running) {
 			return;
@@ -59,6 +65,9 @@ public class LooperExecutor extends Thread implements Executor {
 		}
 	}
 
+	/**
+	 *
+	 */
 	public synchronized void requestStop() {
 		if (!running) {
 			return;
@@ -73,11 +82,18 @@ public class LooperExecutor extends Thread implements Executor {
 		});
 	}
 
-	// Checks if current thread is a looper thread.
+	/**
+	 * Checks if current thread is a looper thread.
+	 * @return
+	 */
 	public boolean checkOnLooperThread() {
 		return (Thread.currentThread().getId() == threadId);
 	}
 
+	/**
+	 *
+	 * @param runnable
+	 */
 	@Override
 	public synchronized void execute(final Runnable runnable) {
 		if (!running) {
