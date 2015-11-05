@@ -41,7 +41,7 @@ install {
 
                 // Add your description here
                 name 'utilities-android'
-                description = 'An Android utility library meant to be used in other VTT\'s NUBOMEDIA related Android projects.'
+                description = 'Android utility library meant to be used in other VTT\'s NUBOMEDIA related Android projects.'
                 url siteUrl
 
                 // Set your license
