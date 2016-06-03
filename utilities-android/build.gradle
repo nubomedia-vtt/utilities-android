@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "com.jfrog.bintray"
 
-version "1.0.0"
+version "1.0.1"
 
 android {
     compileSdkVersion 23
@@ -12,7 +12,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -25,12 +25,11 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.0'
 }
 
 def siteUrl = 'https://github.com/nubomedia-vtt/utilities-android'      // Homepage URL of the library
 def gitUrl = 'https://github.com/nubomedia-vtt/utilities-android.git'   // Git repository URL
-group = "fi.vtt.nubomedia"                      // Maven Group ID for the artifact
+group = "fi.vtt.nubomedia"                                              // Maven Group ID for the artifact
 
 install {
     repositories.mavenInstaller {
@@ -53,9 +52,9 @@ install {
                 }
                 developers {
                     developer {
-                        id 'vvvilleh'
-                        name 'Ville Valjus'
-                        email 'ville.valjus@vtt.fi'
+                        id 'jpsjanne'
+                        name 'Janne Seppänen'
+                        email 'jannw.seppänen@vtt.fi'
                     }
                 }
                 scm {
@@ -100,7 +99,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        // it is the name that appears in bintray when logged
+        userOrg = 'nubomedia-vtt'
         name = "utilities-android"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
@@ -111,12 +110,12 @@ bintray {
                 sign = true //Determines whether to GPG sign the files. The default is false
                 passphrase = properties.getProperty("bintray.gpg.password") //Optional. The passphrase for GPG signing'
             }
-//            mavenCentralSync {
-//                sync = true //Optional (true by default). Determines whether to sync the version to Maven Central.
-//                user = properties.getProperty("bintray.oss.user") //OSS user token
-//                password = properties.getProperty("bintray.oss.password") //OSS user password
-//                close = '1' //Optional property. By default the staging repository is closed and artifacts are released to Maven Central. You can optionally turn this behaviour off (by puting 0 as value) and release the version manually.
-//            }
+            mavenCentralSync {
+                sync = false //Optional (true by default). Determines whether to sync the version to Maven Central.
+                user = properties.getProperty("bintray.oss.user") //OSS user token
+                password = properties.getProperty("bintray.oss.password") //OSS user password
+                close = '1' //Optional property. By default the staging repository is closed and artifacts are released to Maven Central. You can optionally turn this behaviour off (by puting 0 as value) and release the version manually.
+            }
         }
     }
 }

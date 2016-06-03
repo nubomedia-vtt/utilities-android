@@ -84,7 +84,7 @@ public class LooperExecutor extends Thread implements Executor {
 
 	/**
 	 * Checks if current thread is a looper thread.
-	 * @return
+	 * @return True if the current thread is a looper
 	 */
 	public boolean checkOnLooperThread() {
 		return (Thread.currentThread().getId() == threadId);
@@ -92,7 +92,7 @@ public class LooperExecutor extends Thread implements Executor {
 
 	/**
 	 *
-	 * @param runnable
+	 * @param runnable The runnable object to be executed
 	 */
 	@Override
 	public synchronized void execute(final Runnable runnable) {
