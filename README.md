@@ -1,9 +1,26 @@
+[![License badge](https://img.shields.io/badge/license-Apache2-orange.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+[![][NUBOMEDIA Logo]][NUBOMEDIA]
+
+Copyright © 2016 [VTT]. Licensed under [Apache 2.0 License].
+
 utilities-android
 =================
 
 This repository contains an Android utility library meant to be used in other VTT's NUBOMEDIA related Android projects. It's a support library for reducing code redundancy.
 
-This project is part of [NUBOMEDIA].
+What is NUBOMEDIA
+-----------------
+This project is part of [NUBOMEDIA], which is an open source cloud Platform as a
+Service (PaaS) which makes possible to integrate Real Time Communications (RTC)
+and multimedia through advanced media processing capabilities. The aim of
+NUBOMEDIA is to democratize multimedia technologies helping all developers to
+include advanced multimedia capabilities into their Web and smartphone
+applications in a simple, direct and fast manner. To accomplish that objective,
+NUBOMEDIA provides a set of APIs that try to abstract all the low level details
+of service deployment, management, and exploitation allowing applications to
+transparently scale and adapt to the required load while preserving QoS
+guarantees.
 
 Repository structure
 --------------------
@@ -69,6 +86,9 @@ Support
 Support is provided through the [Nubomedia Public Mailing List]
 
 [NUBOMEDIA]: http://www.nubomedia.eu
+[VTT]: http://www.vtt.fi
+[NUBOMEDIA Logo]: http://www.nubomedia.eu/sites/default/files/nubomedia_logo-small.png
+[Apache 2.0 License]: https://www.apache.org/licenses/LICENSE-2.0.txt
 [Github]: https://github.com/nubomedia-vtt/utilities-android
 [Nubomedia Public Mailing List]: https://groups.google.com/forum/#!forum/nubomedia-dev
 [maven artifact page]: http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22fi.vtt.nubomedia%22%20AND%20a%3A%22utilities-android%22

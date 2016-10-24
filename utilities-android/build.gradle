@@ -2,16 +2,16 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "com.jfrog.bintray"
 
-version "1.0.1"
+version "1.0.2"
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 24
     buildToolsVersion "21.1.2"
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 24
         versionCode 1
-        versionName "1.0.1"
+        versionName "1.0.2"
     }
     buildTypes {
         release {
@@ -36,17 +36,13 @@ install {
         pom {
             project {
                 packaging 'aar'
-
-                // Add your description here
                 name 'utilities-android'
                 description = 'Android utility library meant to be used in other VTT\'s NUBOMEDIA related Android projects.'
                 url siteUrl
-
-                // Set your license
                 licenses {
                     license {
-                        name 'The BSD 3-Clause License'
-                        url 'https://github.com/nubomedia-vtt/utilities-android/blob/master/LICENSE'
+                        name 'Apache License 2.0'
+                        url 'https://www.apache.org/licenses/LICENSE-2.0.txt'
                     }
                 }
                 developers {
